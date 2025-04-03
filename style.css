@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ----------------- VARIABLES ----------------- */
+:root {
+    --primary-color: #ff6b00;
+    --text-color: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.15);
+    --border-color: rgba(255, 255, 255, 0.3);
+    --box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------- GENERAL STYLING ----------------- */
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(Weather.png) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------- CONTAINER ----------------- */
+.container {
+    width: 40rem;
+    background: var(--bg-glass);
+    backdrop-filter: blur(1rem);
+    border-radius: 1.2rem;
+    box-shadow: 0 2rem 4rem var(--box-shadow);
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+/* ----------------- SEARCH BOX ----------------- */
+.search_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    padding: 1.2rem;
+    backdrop-filter: blur(0.8rem);
+    box-shadow: 0 1rem 2rem var(--box-shadow);
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+}
+
+.search_box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0 1.2rem;
+}
+
+.search_box input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search_box button {
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.search_box button:hover {
+    background: #e65c00;
+}
+
+.search_box .icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    color: #fff;
+}
+
+/* ----------------- WEATHER DISPLAY ----------------- */
+#show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#show h2 {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather, .desc {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.weather {
+    margin: 0.5rem 0;
+}
+
+#show img {
+    margin-top: 1.5rem;
+    width: 10rem;
+    filter: drop-shadow(0 1rem 2rem var(--box-shadow));
+}
+
+#show h1 {
+    font-size: 6rem;
+    margin: 1.5rem 0;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* ----------------- TEMPERATURE CONTAINER ----------------- */
+.temp_container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.temp_container div {
+    padding: 1rem;
+    flex: 1;
+}
+
+.temp_container div:first-child {
+    border-right: 2px solid var(--border-color);
+}
+
+.temp_container .title {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.temp_container .temp {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* ----------------- ERROR MESSAGE ----------------- */
+.error {
+    margin-top: 2rem;
+    color: #ffcccc;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
