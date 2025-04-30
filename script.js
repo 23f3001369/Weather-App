@@ -3,7 +3,7 @@ let search = document.getElementById("search");
 let cityVal = document.getElementById("city");
 
 //Secret key.
-let key = "key";
+let key = "616af53e7813811fe7deb9c3303af79b";
 
 let getWeather = () => {
   let cityValue = cityVal.value;
