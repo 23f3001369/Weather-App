@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    background: url(Weather.png) no-repeat center center/cover;
+    background: url(WeatherApp.png) no-repeat center center/cover;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -33,8 +33,9 @@ body {
 /* ----------------- CONTAINER ----------------- */
 .container {
     width: 40rem;
-    background: var(--bg-glass);
-    backdrop-filter: blur(1rem);
+    
+    /* background: var(--bg-glass); */
+    /* backdrop-filter: blur(1rem); */
     border-radius: 1.2rem;
     box-shadow: 0 2rem 4rem var(--box-shadow);
     padding: 2.5rem;
@@ -44,12 +45,14 @@ body {
 
 /* ----------------- SEARCH BOX ----------------- */
 .search_box {
+    background: var(--bg-glass);
+    margin-top: 68%;
     width: 100%;
     display: flex;
     align-items: center;
     border-radius: 3rem;
     padding: 1.2rem;
-    backdrop-filter: blur(0.8rem);
+    /* backdrop-filter: blur(0.8rem); */
     box-shadow: 0 1rem 2rem var(--box-shadow);
     background: rgba(255, 255, 255, 0.2);
     margin-bottom: 2rem;
@@ -170,4 +173,11 @@ body {
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 0.1rem;
+}
+
+
+canvas {
+    margin-top: 2rem;
+    width: 100%;
+    margin-top: 25%;
 }
