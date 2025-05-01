@@ -206,11 +206,7 @@
 let show = document.getElementById("show");
 let search = document.getElementById("search");
 let cityVal = document.getElementById("city");
-<<<<<<< HEAD
-=======
 
-//Secret key.
->>>>>>> 754f7845a6f06743648516f4e25bc51e25ca1769
 let key = "616af53e7813811fe7deb9c3303af79b";
 
 // Try loading last searched city
@@ -235,7 +231,6 @@ window.addEventListener("load", () => {
     }
   }
 });
-<<<<<<< HEAD
 
 let getWeather = (cityName = null) => {
   let cityValue = cityName || cityVal.value.trim();
@@ -338,7 +333,3 @@ search.addEventListener("click", () => getWeather());
 cityVal.addEventListener("keydown", (e) => {
   if (e.key === "Enter") getWeather();
 });
-=======
-search.addEventListener("click", getWeather);
-window.addEventListener("load", getWeather);
->>>>>>> 754f7845a6f06743648516f4e25bc51e25ca1769
